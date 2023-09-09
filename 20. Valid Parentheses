@@ -1,0 +1,38 @@
+SOLUTION 1:
+
+
+class Solution:
+
+    def stackIn(self, stack, val):
+        stack.append(val)
+
+    def stackOut(self, stack, val, mapping):
+        if len(stack) == 0:
+            return False
+        
+        if stack[-1] == mapping[val]:
+            del(stack[-1])
+        else:
+            return False
+
+    def isValid(self, s: str) -> bool:
+        
+        stack = list()
+        mapping = {")":"(", "]" : "[", "}":"{"}
+
+
+        for i in s:
+
+            if i in "({[":
+                self.stackIn(stack, i)
+            else: 
+                boolean = self.stackOut(stack, i, mapping)
+                if boolean == False:
+                    return False
+        
+        if len(stack)==0:
+            return True
+--- 
+SOLUTION 2:
+
+
