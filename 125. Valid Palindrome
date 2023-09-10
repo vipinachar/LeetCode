@@ -1,0 +1,24 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        string = ""
+        for char in s:
+            if char.isalpha() or char.isnumeric():
+                string = string + char 
+        
+        string=string.lower()
+        if string == string[::-1]:
+            return True 
+        else:
+            return False
+
+        
+
+-----
+
+Runtime :
+48ms
+Beats 75.65%of users with Python3
+
+Memory :
+17.16MB
+Beats 63.43%of users with Python3
