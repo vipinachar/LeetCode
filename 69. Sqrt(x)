@@ -1,0 +1,20 @@
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        i = 1
+        while True:
+            j = i * i 
+            if x < j:
+                return i - 1
+            i = i + 1 
+
+
+Runtime:
+1469ms
+Beats 15.72%of users with Python3
+
+Memory:
+16.14MB
+Beats 88.54%of users with Python3
+        
+----------------------------------------------
+
