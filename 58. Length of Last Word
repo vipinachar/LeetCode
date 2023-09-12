@@ -1,0 +1,18 @@
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+
+        string_array = s.split()
+        return int(len(string_array[-1]))
+        
+
+---- solution 1 ---- 
+Runtime:
+37ms
+Beats 69.62%of users with Python3
+Memory:
+16.24MB
+Beats 82.87%of users with Python3
+
+
+
+

@@ -1,0 +1,12 @@
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+
+        decimal_a = int(a,2)
+        decimal_b = int(b,2)
+
+        summ = decimal_a + decimal_b 
+
+        binary_value = bin(summ)
+
+        return binary_value.replace('0b', '')
+        
