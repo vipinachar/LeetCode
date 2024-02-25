@@ -1,0 +1,14 @@
+class Solution:
+    def maxCoins(self, piles: List[int]) -> int:
+
+        piles.sort()
+        n = len(piles)
+        count_coins = 0 
+
+
+        for piles_index in range((n//3), n, 2):
+            count_coins += piles[piles_index]
+        
+        return count_coins
+
+        
