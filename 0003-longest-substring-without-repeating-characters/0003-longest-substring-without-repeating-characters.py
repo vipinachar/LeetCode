@@ -9,9 +9,6 @@ class Solution:
         maximum_length = float("-inf")
         frequency = [0] * 256
 
-        # s = "aaaaaaa"
-        # s = "abcdefcd"
-        # s = "aaabbb"
         while end_pointer < len(s):
             element_to_add = s[end_pointer]
             if frequency[ord(element_to_add)] == 0:
