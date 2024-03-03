@@ -22,12 +22,12 @@ class Solution:
 
         # i) brute force 
 
-        for i in range(2,n-1):
-            baseRepresentation = getBaseRepresentation(n,i)
-            if checkPallindrome(baseRepresentation) == False :
+        for i in range(n-2,1,-1): # o(N)
+            baseRepresentation = getBaseRepresentation(n,i) # o(logN)
+            if checkPallindrome(baseRepresentation) == False : # o(N)
                 return False 
         
-        return True 
+        return True # o(n^2) sc o(1)
                 
 
 
